@@ -1,0 +1,62 @@
+nohup: ignoring input
+
+> saas-pme-africa@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.0.0.77:3001
+- Environments: .env.local
+✓ Ready in 421ms
+✓ Running next.config.ts took 32ms
+⨯ Another next dev server is already running.
+
+ GET / 200 in 66ms (next.js: 4ms, proxy.ts: 8ms, application-code: 55ms)
+ GET / 200 in 554ms (next.js: 6ms, proxy.ts: 465ms, application-code: 83ms)
+ GET / 200 in 318ms (next.js: 6ms, proxy.ts: 255ms, application-code: 57ms)
+ GET / 200 in 264ms (next.js: 4ms, proxy.ts: 213ms, application-code: 48ms)
+ GET /dashboard/products/new 200 in 957ms (next.js: 103ms, proxy.ts: 102ms, application-code: 752ms)
+ GET /dashboard/products 200 in 340ms (next.js: 23ms, proxy.ts: 102ms, application-code: 216ms)
+ GET /dashboard/products/cdd21ef8-b5ab-470a-9664-e4c2a47115c1 200 in 803ms (next.js: 478ms, proxy.ts: 42ms, application-code: 282ms)
+ GET /dashboard 200 in 376ms (next.js: 81ms, proxy.ts: 77ms, application-code: 217ms)
+ GET /dashboard/treasury/new 404 in 168ms (next.js: 28ms, proxy.ts: 117ms, application-code: 23ms)
+ GET /dashboard/treasury/new 404 in 106ms (next.js: 5ms, proxy.ts: 51ms, application-code: 50ms)
+ GET /dashboard 200 in 341ms (next.js: 4ms, proxy.ts: 44ms, application-code: 294ms)
+ GET /dashboard 200 in 401ms (next.js: 4ms, proxy.ts: 69ms, application-code: 327ms)
+ GET /dashboard 200 in 365ms (next.js: 5ms, proxy.ts: 80ms, application-code: 280ms)
+ GET /dashboard/invoices 200 in 137ms (next.js: 24ms, proxy.ts: 63ms, application-code: 49ms)
+ GET /dashboard/invoices/new 200 in 105ms (next.js: 20ms, proxy.ts: 64ms, application-code: 21ms)
+ GET /dashboard/clients 200 in 167ms (next.js: 23ms, proxy.ts: 123ms, application-code: 21ms)
+ GET /dashboard/products 200 in 272ms (next.js: 4ms, proxy.ts: 75ms, application-code: 193ms)
+ GET /dashboard/products/new 200 in 247ms (next.js: 6ms, proxy.ts: 88ms, application-code: 152ms)
+ POST /dashboard/products/new 200 in 721ms (next.js: 4ms, proxy.ts: 107ms, application-code: 610ms)
+  └─ ƒ createProductAction({"category":"","description":"","name":"Vvjjy","...":"2 items not stringified"}) in 387ms src/app/actions/products.ts
+ GET /dashboard/products 200 in 200ms (next.js: 4ms, proxy.ts: 45ms, application-code: 151ms)
+ GET /dashboard/products 200 in 301ms (next.js: 4ms, proxy.ts: 50ms, application-code: 248ms)
+ GET /dashboard/products 200 in 255ms (next.js: 8ms, proxy.ts: 42ms, application-code: 205ms)
+ POST /dashboard/products 200 in 501ms (next.js: 3ms, proxy.ts: 57ms, application-code: 441ms)
+  └─ ƒ duplicateProductAction("cdd21ef8-b5ab-470a-9664-e4c2a47115c1") in 238ms src/app/actions/products.ts
+ GET /dashboard/products 200 in 234ms (next.js: 3ms, proxy.ts: 37ms, application-code: 194ms)
+ GET /dashboard/products/cb8b06bf-b1d3-4eee-a4e3-36c43892b12e 200 in 353ms (next.js: 18ms, proxy.ts: 67ms, application-code: 268ms)
+ GET /dashboard/products 200 in 315ms (next.js: 3ms, proxy.ts: 65ms, application-code: 247ms)
+ GET /dashboard/products/new 200 in 235ms (next.js: 4ms, proxy.ts: 66ms, application-code: 165ms)
+ GET /dashboard/products/new 200 in 666ms (next.js: 3ms, proxy.ts: 226ms, application-code: 436ms)
+ GET /dashboard/products 200 in 517ms (next.js: 3ms, proxy.ts: 148ms, application-code: 366ms)
+ GET /dashboard/products/new 200 in 313ms (next.js: 3ms, proxy.ts: 117ms, application-code: 192ms)
+ GET /dashboard/products 200 in 264ms (next.js: 4ms, proxy.ts: 72ms, application-code: 188ms)
+ GET /dashboard/products/cdd21ef8-b5ab-470a-9664-e4c2a47115c1 200 in 538ms (next.js: 13ms, proxy.ts: 70ms, application-code: 454ms)
+ GET /dashboard/products/new 200 in 952ms (next.js: 5ms, proxy.ts: 393ms, application-code: 555ms)
+ GET /dashboard/products/new 200 in 864ms (next.js: 3ms, proxy.ts: 145ms, application-code: 717ms)
+ GET /dashboard/products/new 200 in 303ms (next.js: 4ms, proxy.ts: 42ms, application-code: 258ms)
+ GET /dashboard/products/new 200 in 290ms (next.js: 7ms, proxy.ts: 41ms, application-code: 242ms)
+ GET /dashboard/products/new 200 in 333ms (next.js: 3ms, proxy.ts: 118ms, application-code: 212ms)
+ GET /dashboard/products/new 200 in 435ms (next.js: 3ms, proxy.ts: 80ms, application-code: 351ms)
+ GET /dashboard/products/new 200 in 1114ms (next.js: 8ms, proxy.ts: 463ms, application-code: 642ms)
+ GET /dashboard/invoices 200 in 79ms (next.js: 11ms, proxy.ts: 42ms, application-code: 27ms)
+ GET /dashboard/products 200 in 312ms (next.js: 5ms, proxy.ts: 75ms, application-code: 231ms)
+ GET /dashboard/products/cdd21ef8-b5ab-470a-9664-e4c2a47115c1 200 in 393ms (next.js: 26ms, proxy.ts: 36ms, application-code: 331ms)
+ GET /dashboard/products/new 200 in 232ms (next.js: 4ms, proxy.ts: 60ms, application-code: 169ms)
+ GET /dashboard/products 200 in 791ms (next.js: 4ms, proxy.ts: 305ms, application-code: 483ms)
+ GET /dashboard/products 200 in 316ms (next.js: 7ms, proxy.ts: 63ms, application-code: 246ms)
+ GET /dashboard/products/new 200 in 305ms (next.js: 3ms, proxy.ts: 70ms, application-code: 232ms)
