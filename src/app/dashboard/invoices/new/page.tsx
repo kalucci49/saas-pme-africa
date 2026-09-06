@@ -9,7 +9,7 @@ import {
   Save,
   Info,
   Eye,
-  EyeOff,
+  EyeOff,Loader2,
 } from "lucide-react";
 
 // ---------------------------------------------------------------------------
@@ -260,9 +260,11 @@ function SendConfirm({
   clientName,
   onCancel,
   onConfirm,
+  isSending,
 }: {
   clientName: string;
   onCancel: () => void;
+  isSending: boolean;
   onConfirm: () => void;
 }) {
   return (
@@ -282,10 +284,10 @@ function SendConfirm({
         </div>
         <div className="mt-5 flex justify-end gap-2">
           <button onClick={onCancel} className="rounded-lg px-3.5 py-2 text-sm font-medium text-muted hover:bg-cream">
-            Annuler
-          </button>
-          <button onClick={onConfirm} className="flex items-center gap-1.5 rounded-lg bg-ink px-3.5 py-2 text-sm font-medium text-white hover:bg-ink-hover">
-            <Send size={14} />
+<button onClick={onConfirm} disabled={isSending} className="flex items-center gap-1.5 rounded-lg bg-ink px-3.5 py-2 text-sm font-medium text-white hover:bg-ink-hover disabled:opacity-60">
+    {isSending ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
+      {isSending ? "Envoi..." : "Confirmer l&apos;envoi"}
+      </button>
             Confirmer l&apos;envoi
           </button>
         </div>
@@ -301,6 +303,7 @@ export default function NewInvoicePage() {
   const [note, setNote] = useState("");
   const [lines, setLines] = useState<LineItem[]>([newLine()]);
   const [showSendConfirm, setShowSendConfirm] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [savedMessage, setSavedMessage] = useState<string | null>(null);
   const [showPreviewMobile, setShowPreviewMobile] = useState(false);
   const [orgName, setOrgName] = useState(ORG.name);
@@ -374,10 +377,14 @@ export default function NewInvoicePage() {
     setTimeout(() => setSavedMessage(null), 3000);
   };
   const handleSend = () => {
-    setShowSendConfirm(false);
-    setSavedMessage("Facture envoyée à " + client + ".");
-    setTimeout(() => setSavedMessage(null), 3000);
-  };
+      setIsSending(true);
+          setTimeout(() => {
+                setIsSending(false);
+                      setShowSendConfirm(false);
+                            setSavedMessage("Facture envoyée à " + client + ".");
+                                  setTimeout(() => setSavedMessage(null), 3000);
+                                      }, 800);
+                                        };
 
   return (
     <div className="min-h-screen bg-cream pb-24">
@@ -595,7 +602,7 @@ export default function NewInvoicePage() {
       </div>
 
       {showSendConfirm && (
-        <SendConfirm clientName={client} onCancel={() => setShowSendConfirm(false)} onConfirm={handleSend} />
+        <SendConfirm clientName={client} onCancel={() => setShowSendConfirm(false)} onConfirm={handleSend} />isSending={isSending}
       )}
     </div>
   );
